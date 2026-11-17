@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Daftar petshop terpercaya di Kota Depok — Temukan lokasi, jam operasional, kontak, dan link Google Maps petshop di Beji, Sukmajaya, Cimanggis, Limo, Sawangan, Cinere, dll." />
+  <title>Petshop di Depok — Persatuan Kucing Depok (PKD)</title>
+
+  <!-- Google Fonts: Fredoka & Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+
+        <a href="index.html" class="logo" aria-label="PKD — Halaman Beranda">
+          <div class="logo-bubble" aria-hidden="true">🐱</div>
+          <div class="logo-text-group">
+            <span class="logo-title">PKD<span>.</span></span>
+            <span class="logo-sub">Kucing Depok</span>
+          </div>
+        </a>
+
+        <button class="hamburger" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <nav aria-label="Navigasi utama">
+          <ul class="nav-menu" id="nav-menu" role="list">
+            <li><a href="index.html"   class="nav-link">Home</a></li>
+            <li><a href="kucing.html"  class="nav-link">Jenis Kucing</a></li>
+            <li><a href="makanan.html" class="nav-link">Makanan</a></li>
+            <li><a href="petshop.html" class="nav-link active">Petshop</a></li>
+            <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+          </ul>
+        </nav>
+
+        <a href="kucing.html" class="btn btn-pink header-cta">Jelajahi Kucing 🐾</a>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN ==================== -->
+  <main id="main-content">
+
+    <!-- PAGE HERO BANNER -->
+    <section class="page-hero-bubble" aria-labelledby="page-heading">
+      <div class="container">
+        <div class="page-hero-icon" aria-hidden="true">🏪</div>
+        <h1 class="page-hero-title" id="page-heading">Petshop di Kota Depok</h1>
+        <p class="page-hero-desc">
+          Temukan petshop terdekat untuk membeli pakan, grooming, aksesoris, dan obat anabul di seluruh wilayah Depok.
+        </p>
+      </div>
+    </section>
+
+    <!-- SEARCH & PETSHOP CONTENT SECTION -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Search Bar Card -->
+        <div class="search-filter-wrapper">
+          <div class="search-input-pill-wrap" role="search">
+            <span class="search-pill-icon" aria-hidden="true">🔍</span>
+            <input
+              type="search"
+              id="petshop-search"
+              class="search-input-pill"
+              placeholder="Cari petshop atau nama kecamatan (contoh: Beji, Cinere, Sawangan)..."
+              aria-label="Cari petshop di Depok"
+              autocomplete="off"
+            />
+          </div>
+          <div class="pill-badges-row" style="margin-top: 0.5rem;">
+            <span class="feature-pill"><span class="pill-dot teal"></span> Beji</span>
+            <span class="feature-pill"><span class="pill-dot yellow"></span> Sukmajaya</span>
+            <span class="feature-pill"><span class="pill-dot pink"></span> Cimanggis</span>
+            <span class="feature-pill"><span class="pill-dot blue"></span> Sawangan</span>
+            <span class="feature-pill"><span class="pill-dot teal"></span> Cinere</span>
+            <span class="feature-pill"><span class="pill-dot"></span> Limo</span>
+          </div>
+        </div>
+
+        <!-- Result Info -->
+        <div class="result-info" role="status" aria-live="polite">
+          <span id="result-count">7 petshop ditemukan</span>
+          <span style="font-size: 0.85rem; color: var(--color-text-muted);">💡 Klik "Lihat Lokasi" untuk membuka rute Google Maps</span>
+        </div>
+
+        <!-- Petshop Grid -->
+        <div id="petshop-grid" class="cat-grid" role="list" aria-label="Daftar petshop di Depok">
+          <!-- Dirender secara dinamis oleh js/petshop.js -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="empty-state" role="alert" aria-live="assertive">
+          <span class="empty-state-emoji" aria-hidden="true">🏬</span>
+          <h3>Petshop Tidak Ditemukan</h3>
+          <p>Petshop di area atau dengan nama tersebut belum terdaftar di database kami.<br />Coba cari nama kecamatan lain!</p>
+          <button
+            class="btn btn-pink btn-sm"
+            onclick="document.getElementById('petshop-search').value=''; document.getElementById('petshop-search').dispatchEvent(new Event('input'));"
+          >
+            Reset Pencarian 🏪
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <div class="logo" style="margin-bottom: 1rem;">
+            <div class="logo-bubble" aria-hidden="true">🐱</div>
+            <div class="logo-text-group">
+              <span class="logo-title" style="color: var(--color-white);">PKD<span>.</span></span>
+              <span class="logo-sub" style="color: var(--color-teal);">Persatuan Kucing Depok</span>
+            </div>
+          </div>
+          <p class="footer-text">
+            Pusat informasi dan direktori petshop terpercaya untuk masyarakat Kota Depok.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Jelajahi Menu</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html">🏠 Home / Beranda</a></li>
+            <li><a href="kucing.html">🐈 10 Ras Kucing</a></li>
+            <li><a href="makanan.html">🍽️ Panduan Nutrisi</a></li>
+            <li><a href="petshop.html">🏪 Daftar Petshop Depok</a></li>
+            <li><a href="tentang.html">ℹ️ Profil Tim Pengembang</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Study Group (XI)</h4>
+          <p style="font-size: 0.95rem; color: #D1E1FA; line-height: 1.8;">
+            📍 SMA Muhammadiyah 4 Depok<br />
+            📚 Mapel: Koding & AI (KKA)<br />
+            🐱 Anggota: Keizan, Al Fayyadh, Nafi, Thoriq, Rune, Khanza.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Persatuan Kucing Depok (PKD) · Webflow "Bubble Bash" Style Remake 🐾</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Kembali ke atas">↑</button>
+
+  <!-- Scripts -->
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/petshop.js" defer></script>
+  <script src="js/settings.js" defer></script>
+</body>
+</html>

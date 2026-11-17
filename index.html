@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Persatuan Kucing Depok (PKD) — Pusat informasi kucing untuk warga Depok: jenis kucing, makanan, dan petshop terpercaya." />
+  <title>Beranda — Persatuan Kucing Depok (PKD)</title>
+
+  <!-- Google Fonts: Fredoka (Heading) & Nunito (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+
+        <!-- Logo Bubble Bash Style -->
+        <a href="index.html" class="logo" aria-label="PKD — Halaman Beranda">
+          <div class="logo-bubble" aria-hidden="true">🐱</div>
+          <div class="logo-text-group">
+            <span class="logo-title">PKD<span>.</span></span>
+            <span class="logo-sub">Kucing Depok</span>
+          </div>
+        </a>
+
+        <!-- Hamburger button (mobile) -->
+        <button class="hamburger" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav aria-label="Navigasi utama">
+          <ul class="nav-menu" id="nav-menu" role="list">
+            <li><a href="index.html"   class="nav-link active">Home</a></li>
+            <li><a href="kucing.html"  class="nav-link">Jenis Kucing</a></li>
+            <li><a href="makanan.html" class="nav-link">Makanan</a></li>
+            <li><a href="petshop.html" class="nav-link">Petshop</a></li>
+            <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header CTA Button -->
+        <a href="kucing.html" class="btn btn-pink header-cta">Jelajahi Kucing 🐾</a>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN ==================== -->
+  <main id="main-content">
+
+    <!-- HERO SECTION (SUNNY YELLOW & BUBBLE BASH STYLE) -->
+    <section class="hero-bubble" aria-labelledby="hero-heading">
+      <!-- Floating Background Bubbles -->
+      <div class="floating-circle circle-1" aria-hidden="true"></div>
+      <div class="floating-circle circle-2" aria-hidden="true"></div>
+      <div class="floating-circle circle-3" aria-hidden="true"></div>
+      <div class="floating-circle circle-4" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- Left Column: Content -->
+          <div class="hero-content">
+            <div class="pill-badge">
+              <span class="pill-dot"></span>
+              KOTA DEPOK & SEKITARNYA
+            </div>
+
+            <h1 class="hero-title" id="hero-heading">
+              Welcome to<br />
+              <span class="brand-highlight">Persatuan Kucing Depok</span>
+            </h1>
+
+            <div class="hero-ribbon-pill">
+              🐾 Kenali Rasnya. Penuhi Nutrisinya. Temukan Petshopnya.
+            </div>
+
+            <p class="hero-description">
+              Pusat informasi dan edukasi dasar seputar kucing terlengkap di Kota Depok — 
+              mulai dari karakteristik 10 ras kucing populer, tips memilih makanan basah dan kering, 
+              hingga daftar lokasi petshop terpercaya dengan peta rute langsung!
+            </p>
+
+            <div class="hero-actions">
+              <a href="kucing.html" class="btn btn-pink btn-lg">
+                Jelajahi Jenis Kucing 🐈
+              </a>
+              <a href="petshop.html" class="btn btn-white btn-lg">
+                Cari Petshop Depok 🏪
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Showcase -->
+          <div class="hero-showcase">
+            <div class="hero-card-showcase">
+              <div class="hero-floating-tag">
+                <span>✨</span> 100% Edukatif & Gratis
+              </div>
+              <div class="hero-cat-img-wrapper">
+                <img src="images/british-shorthair.jpg" alt="Kucing British Shorthair Lucu PKD" />
+              </div>
+              <h2 class="hero-card-title">Persatuan Kucing Depok</h2>
+              <p class="hero-card-caption">
+                Edukasi & direktori ramah bagi semua pemilik kucing di Depok! 🐱
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE TICKER (HOT PINK STRIP) -->
+    <div class="marquee-wrapper" aria-hidden="true">
+      <div class="marquee-content">
+        <span class="marquee-item">🐾 10+ RAS KUCING POPULER</span>
+        <span class="marquee-item">🥫 PANDUAN MAKANAN KERING & BASAH</span>
+        <span class="marquee-item">🏪 7+ LOKASI PETSHOP KOTA DEPOK</span>
+        <span class="marquee-item">💡 TIPS NUTRISI & KESEHATAN HARIAN</span>
+        <span class="marquee-item">🏫 STUDY GROUP XI SMA MUHAMMADIYAH 4 DEPOK</span>
+        <span class="marquee-item">❤️ 100% GRATIS & RAMAH PEMULA</span>
+        <!-- Duplikat untuk seamless loop -->
+        <span class="marquee-item">🐾 10+ RAS KUCING POPULER</span>
+        <span class="marquee-item">🥫 PANDUAN MAKANAN KERING & BASAH</span>
+        <span class="marquee-item">🏪 7+ LOKASI PETSHOP KOTA DEPOK</span>
+        <span class="marquee-item">💡 TIPS NUTRISI & KESEHATAN HARIAN</span>
+        <span class="marquee-item">🏫 STUDY GROUP XI SMA MUHAMMADIYAH 4 DEPOK</span>
+        <span class="marquee-item">❤️ 100% GRATIS & RAMAH PEMULA</span>
+      </div>
+    </div>
+
+    <!-- SECTION 1: "APA ITU PKD?" (DEEP NAVY SPLIT CARD) -->
+    <section class="section">
+      <div class="container">
+
+        <div class="about-pkd-card">
+          <div class="about-pkd-grid">
+            <div class="about-pkd-info">
+              <h2 class="about-pkd-title">
+                Apa itu <span>Persatuan Kucing Depok?</span>
+              </h2>
+              <p class="about-pkd-text">
+                <strong>Persatuan Kucing Depok (PKD)</strong> hadir sebagai platform informasi digital yang membantu 
+                pemilik kucing pemula maupun berpengalaman di Kota Depok untuk memperoleh pengetahuan dasar tentang 
+                perawatan, variasi ras kucing di dunia, serta kebutuhan nutrisi harian yang tepat.
+              </p>
+              <p class="about-pkd-text">
+                Kami merangkum data dan lokasi petshop di berbagai kecamatan Depok (seperti Beji, Sukmajaya, Cimanggis, 
+                Limo, hingga Sawangan) agar kamu tidak perlu bingung mencari pakan dan perlengkapan anabul tercinta.
+              </p>
+              <div class="about-pkd-highlights">
+                <span class="highlight-chip">🐱 10 Ras Kucing Lengkap</span>
+                <span class="highlight-chip">🍽️ Edukasi Pakan Aman</span>
+                <span class="highlight-chip">🗺️ Google Maps Terintegrasi</span>
+                <span class="highlight-chip">📱 Responsif di HP & Laptop</span>
+              </div>
+            </div>
+
+            <div class="about-pkd-media">
+              <img src="images/persia.webp" alt="Kucing Persia PKD" class="about-cat-preview" />
+              <p style="margin-top: 1rem; font-family: var(--font-heading); font-size: 1.1rem; color: var(--color-yellow);">
+                🐱 "Kucing sehat, pemilik bahagia!"
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: 3 FITUR UTAMA (YELLOW, TEAL, PINK CHUNKY CARDS) -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+
+        <div class="section-title-wrap">
+          <span class="section-pill-tag">
+            <span class="pill-dot teal"></span> FITUR WEBSITE
+          </span>
+          <h2 class="section-main-title">3 Langkah Mudah Bersama PKD</h2>
+          <p class="section-subtitle">
+            Semua yang kamu butuhkan untuk merawat kucing kesayangan di Kota Depok
+          </p>
+        </div>
+
+        <div class="steps-grid">
+
+          <!-- Step 1: Yellow -->
+          <div class="step-card step-card-yellow">
+            <div class="step-number-circle">1</div>
+            <h3>Kenali Jenis Kucing</h3>
+            <p>
+              Pelajari 10 ras kucing terpopuler di dunia dan Indonesia — mulai dari Persia, Maine Coon, 
+              Siamese, hingga Kucing Kampung yang tangguh dan adaptif.
+            </p>
+            <a href="kucing.html" class="step-card-btn">Lihat Katalog Kucing →</a>
+          </div>
+
+          <!-- Step 2: Teal -->
+          <div class="step-card step-card-teal">
+            <div class="step-number-circle">2</div>
+            <h3>Pilih Nutrisi yang Pas</h3>
+            <p>
+              Pahami perbedaan makanan kering vs basah, porsi makan untuk kitten maupun kucing dewasa, 
+              serta tips membaca kandungan gizi pada kemasan.
+            </p>
+            <a href="makanan.html" class="step-card-btn">Panduan Makanan →</a>
+          </div>
+
+          <!-- Step 3: Pink -->
+          <div class="step-card step-card-pink">
+            <div class="step-number-circle">3</div>
+            <h3>Temukan Petshop Depok</h3>
+            <p>
+              Temukan petshop terdekat di sekitarmu dengan alamat lengkap, jam operasional, dan tombol 
+              navigasi Google Maps untuk belanja tanpa repot.
+            </p>
+            <a href="petshop.html" class="step-card-btn">Cari Lokasi Petshop →</a>
+          </div>
+
+        </div>
+
+        <!-- Pill Badges Row -->
+        <div class="pill-badges-row">
+          <div class="feature-pill"><span class="pill-dot teal"></span> 10+ Ras Kucing Populer</div>
+          <div class="feature-pill"><span class="pill-dot"></span> Pakan Kering & Basah</div>
+          <div class="feature-pill"><span class="pill-dot yellow"></span> Tersebar di Kota Depok</div>
+          <div class="feature-pill"><span class="pill-dot blue"></span> Navigasi Google Maps</div>
+          <div class="feature-pill"><span class="pill-dot teal"></span> 100% Edukatif & Gratis</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: DARK NAVY 4-CARD SHOWCASE (SCREENSHOT 4 STYLE) -->
+    <section class="dark-navy-section">
+      <div class="container">
+
+        <h2 class="dark-navy-title">
+          Inisiatif Pelajar SMA<br />
+          <span>dengan Semangat Besar</span>
+        </h2>
+
+        <div class="four-cards-grid">
+
+          <!-- Card 1: Yellow -->
+          <div class="chunky-feature-card card-yellow">
+            <div class="card-icon-badge" aria-hidden="true">❤️</div>
+            <h3>Kecintaan pada Kucing</h3>
+            <p>
+              Dibangun dari kepedulian bersama terhadap kesejahteraan dan kesehatan anabul di Depok.
+            </p>
+          </div>
+
+          <!-- Card 2: Teal -->
+          <div class="chunky-feature-card card-teal">
+            <div class="card-icon-badge" aria-hidden="true">⭐</div>
+            <h3>Informasi Mudah & Praktis</h3>
+            <p>
+              Konten disajikan dengan bahasa sederhana, ramah pelajar, dan mudah dipahami siapa saja.
+            </p>
+          </div>
+
+          <!-- Card 3: Pink -->
+          <div class="chunky-feature-card card-pink">
+            <div class="card-icon-badge" aria-hidden="true">💡</div>
+            <h3>Riset & Terpercaya</h3>
+            <p>
+              Tips nutrisi dan data jenis kucing disusun dari sumber referensi umum yang bertanggung jawab.
+            </p>
+          </div>
+
+          <!-- Card 4: Blue -->
+          <div class="chunky-feature-card card-blue">
+            <div class="card-icon-badge" aria-hidden="true">👥</div>
+            <h3>Karya Study Group</h3>
+            <p>
+              Proyek pembelajaran KKA Kelas XI SMA Muhammadiyah 4 Depok berbantuan AI Coding.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: KUCING PILIHAN (ARCH CARDS - SCREENSHOT 5 STYLE) -->
+    <section class="section">
+      <div class="container">
+
+        <div class="section-title-wrap">
+          <span class="section-pill-tag">
+            <span class="pill-dot blue"></span> KATALOG PILIHAN
+          </span>
+          <h2 class="section-main-title">🐾 Kucing Paling Populer</h2>
+          <p class="section-subtitle">
+            Intip beberapa ras kucing yang paling diminati para pecinta kucing di Indonesia
+          </p>
+        </div>
+
+        <div class="preview-cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+
+          <!-- Card 1: Persia (Teal Arch) -->
+          <div class="catalog-card arch-teal">
+            <div class="catalog-card-icon teal-bg" aria-hidden="true">🐱</div>
+            <img src="images/persia.webp" alt="Foto Kucing Persia" class="catalog-card-img" />
+            <h3>Kucing Persia</h3>
+            <span class="catalog-badge-pill badge-teal">Berbulu Panjang</span>
+            <p>
+              Dikenal dengan bulu lebat indahnya dan wajah pesek yang khas. Sangat kalem, manis, dan menyukai suasana rumah yang tenang.
+            </p>
+            <a href="kucing.html" class="btn btn-teal">Lihat Ras Persia →</a>
+          </div>
+
+          <!-- Card 2: British Shorthair (Blue Arch + Most Popular Badge) -->
+          <div class="catalog-card arch-blue">
+            <div class="badge-popular">PALING POPULER</div>
+            <div class="catalog-card-icon blue-bg" aria-hidden="true">🐾</div>
+            <img src="images/british-shorthair.jpg" alt="Foto Kucing British Shorthair" class="catalog-card-img" />
+            <h3>British Shorthair</h3>
+            <span class="catalog-badge-pill badge-blue">Berbulu Pendek</span>
+            <p>
+              Memiliki pipi tembem (chubby), mata oranye tajam, dan sifat yang santai. Mudah dirawat dan sangat ramah untuk keluarga.
+            </p>
+            <a href="kucing.html" class="btn btn-pink">Lihat Ras BSH →</a>
+          </div>
+
+          <!-- Card 3: Russian Blue (Teal Arch + New Badge) -->
+          <div class="catalog-card arch-teal">
+            <div class="badge-popular" style="background-color: var(--color-teal); color: var(--color-navy);">BARU! ✨</div>
+            <div class="catalog-card-icon teal-bg" aria-hidden="true">🐈‍⬛</div>
+            <img src="images/russian-blue.jpg" alt="Foto Kucing Russian Blue" class="catalog-card-img" />
+            <h3>Russian Blue</h3>
+            <span class="catalog-badge-pill badge-teal">Berbulu Pendek</span>
+            <p>
+              Bulu perak kebiruan mengkilap dengan mata hijau zamrud yang memesona. Sangat anggun, tenang, dan cerdas.
+            </p>
+            <a href="kucing.html" class="btn btn-teal">Lihat Russian Blue →</a>
+          </div>
+
+          <!-- Card 4: Siamese (Yellow Arch) -->
+          <div class="catalog-card arch-yellow">
+            <div class="catalog-card-icon yellow-bg" aria-hidden="true">😺</div>
+            <img src="images/siamese.jpg" alt="Foto Kucing Siamese" class="catalog-card-img" />
+            <h3>Kucing Siamese</h3>
+            <span class="catalog-badge-pill badge-yellow">Berbulu Pendek</span>
+            <p>
+              Mata biru berkilau dan corak point khas di wajah dan telinga. Sangat cerdas, vokal, dan suka diajak mengobrol!
+            </p>
+            <a href="kucing.html" class="btn btn-outline">Lihat Ras Siamese →</a>
+          </div>
+
+        </div>
+
+        <div class="text-center" style="margin-top: 3.5rem;">
+          <a href="kucing.html" class="btn btn-pink btn-lg">
+            Lihat Seluruh 15 Ras Kucing Lengkap 🐾
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Col 1: Brand -->
+        <div class="footer-brand">
+          <div class="logo" style="margin-bottom: 1rem;">
+            <div class="logo-bubble" aria-hidden="true">🐱</div>
+            <div class="logo-text-group">
+              <span class="logo-title" style="color: var(--color-white);">PKD<span>.</span></span>
+              <span class="logo-sub" style="color: var(--color-teal);">Persatuan Kucing Depok</span>
+            </div>
+          </div>
+          <p class="footer-text">
+            Website informasi dan edukasi dasar kucing untuk masyarakat Kota Depok. Dibuat dengan penuh 
+            semangat oleh siswa SMA Muhammadiyah 4 Depok untuk pembelajaran koding dan kecerdasan artifisial.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigasi -->
+        <div class="footer-col">
+          <h4 class="footer-title">Jelajahi Menu</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html">🏠 Home / Beranda</a></li>
+            <li><a href="kucing.html">🐈 15 Ras Kucing</a></li>
+            <li><a href="makanan.html">🍽️ Panduan Nutrisi</a></li>
+            <li><a href="petshop.html">🏪 Daftar Petshop Depok</a></li>
+            <li><a href="tentang.html">ℹ️ Profil Tim Pengembang</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Identitas Kelompok -->
+        <div class="footer-col">
+          <h4 class="footer-title">Study Group (XI)</h4>
+          <p style="font-size: 0.95rem; color: #D1E1FA; line-height: 1.8;">
+            📍 SMA Muhammadiyah 4 Depok<br />
+            📚 Mapel: Koding & AI (KKA)<br />
+            🐱 Anggota: Keizan, Al Fayyadh, Nafi, Thoriq, Rune, Khanza.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Persatuan Kucing Depok (PKD) · Webflow "Bubble Bash" Style Remake 🐾</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/settings.js" defer></script>
+</body>
+</html>

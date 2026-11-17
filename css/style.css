@@ -1,0 +1,2229 @@
+/* ========================================================
+   PERSATUAN KUCING DEPOK (PKD) — BUBBLE BASH WEBFLOW STYLE
+   Playful, Vibrant, Rounded & Ultra-Modern Design
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+/* =============================================
+   1. CSS CUSTOM PROPERTIES (DESIGN TOKENS)
+   ============================================= */
+:root {
+  /* Webflow Bubble Bash Color Palette */
+  --color-yellow: #FFC83B;
+  --color-yellow-dark: #EAA814;
+  --color-yellow-light: #FFF6DD;
+
+  --color-navy: #0A2756;
+  --color-navy-dark: #061938;
+  --color-navy-card: #0D3370;
+  --color-navy-light: #163E82;
+
+  --color-pink: #FF4D8D;
+  --color-pink-hover: #E83273;
+  --color-pink-light: #FFEBF3;
+
+  --color-teal: #19CFB8;
+  --color-teal-dark: #12A794;
+  --color-teal-light: #E4FBF7;
+
+  --color-blue: #0088FF;
+  --color-blue-dark: #006ED4;
+  --color-blue-light: #E6F3FF;
+
+  --color-white: #FFFFFF;
+  --color-bg: #F7FCFB;
+  --color-bg-alt: #F0F8FA;
+
+  --color-text-primary: #0A2756;
+  --color-text-secondary: #3C5A8A;
+  --color-text-muted: #6B85AC;
+
+  /* Typography */
+  --font-heading: 'Fredoka', 'Quicksand', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+
+  /* Border Radii */
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgba(10, 39, 86, 0.06);
+  --shadow-md: 0 8px 24px rgba(10, 39, 86, 0.10);
+  --shadow-lg: 0 16px 40px rgba(10, 39, 86, 0.14);
+  --shadow-hover: 0 16px 36px rgba(255, 77, 141, 0.28);
+  --shadow-card: 0 10px 30px rgba(10, 39, 86, 0.08);
+
+  /* Layout */
+  --container-max: 1180px;
+  --header-height: 80px;
+  --transition-smooth: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* =============================================
+   THEME OVERRIDES
+   ============================================= */
+
+/* 1. Dark Mode (Midnight Cat) */
+[data-theme="dark"] {
+  --color-bg: #090F1D;
+  --color-bg-alt: #101B33;
+  --color-white: #15223E;
+  --color-navy: #FFFFFF;
+  --color-navy-dark: #050914;
+  --color-navy-card: #192A4C;
+  --color-navy-light: #284478;
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #CBD5E1;
+  --color-text-muted: #8295B5;
+  --color-yellow: #FFB703;
+  --color-yellow-light: #2D230A;
+  --color-pink-light: #3D1426;
+  --color-teal-light: #0D2D2A;
+  --color-blue-light: #0D274A;
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .header {
+  background-color: rgba(21, 34, 62, 0.95);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .hero-bubble {
+  background-color: #1A2849;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 183, 3, 0.2) 0%, transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(255, 77, 141, 0.25) 0%, transparent 35%);
+}
+
+[data-theme="dark"] .pill-badge {
+  background-color: #15223E;
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .hero-card-showcase {
+  background: linear-gradient(145deg, #15223E, #1F3159);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="dark"] .page-hero-bubble {
+  background-color: #18284A;
+}
+
+[data-theme="dark"] .feature-pill {
+  background-color: #15223E;
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .search-input-pill {
+  background-color: #101B33;
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .filter-btn {
+  background-color: #15223E;
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* 2. Pastel Theme (Cotton Candy) */
+[data-theme="pastel"] {
+  --color-yellow: #FFE382;
+  --color-pink: #FF7597;
+  --color-pink-hover: #F0567C;
+  --color-pink-light: #FFF0F4;
+  --color-teal: #7CE0D3;
+  --color-teal-light: #EDFAF8;
+  --color-blue: #8EC5FC;
+  --color-blue-light: #F0F6FF;
+  --color-white: #FFFFFF;
+  --color-bg: #FFF8FA;
+  --color-bg-alt: #FBF0F5;
+  --color-navy: #3D3559;
+  --color-navy-dark: #261F3F;
+  --color-navy-card: #4E4370;
+  --color-text-primary: #3D3559;
+  --color-text-secondary: #6B628A;
+  --color-text-muted: #9A92B6;
+}
+
+/* 3. Nature Fresh Theme (Green & Mint) */
+[data-theme="nature"] {
+  --color-yellow: #D8F3DC;
+  --color-pink: #E76F51;
+  --color-pink-hover: #D95D39;
+  --color-pink-light: #FEF2EE;
+  --color-teal: #2A9D8F;
+  --color-teal-dark: #1E7066;
+  --color-teal-light: #E8F7F5;
+  --color-blue: #457B9D;
+  --color-blue-light: #EBF2F7;
+  --color-white: #FFFFFF;
+  --color-bg: #F4FBF7;
+  --color-bg-alt: #EAF4EE;
+  --color-navy: #1B4332;
+  --color-navy-dark: #081C15;
+  --color-navy-card: #274874;
+  --color-text-primary: #1B4332;
+  --color-text-secondary: #2D6A4F;
+  --color-text-muted: #52796F;
+}
+
+/* Font Size Modifiers */
+[data-fontsize="large"] {
+  font-size: 18px;
+}
+
+[data-fontsize="small"] {
+  font-size: 15px;
+}
+
+/* Reduced Motion Override */
+[data-motion="reduced"] * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* =============================================
+   2. RESET & BASE
+   ============================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-navy);
+  line-height: 1.25;
+}
+
+p {
+  color: var(--color-text-secondary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-smooth);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.text-center { text-align: center; }
+
+/* =============================================
+   3. BUTTONS (CHUNKY PILL STYLE)
+   ============================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-pill);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Pink Primary Button */
+.btn-primary,
+.btn-pink {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  border-color: var(--color-pink);
+  box-shadow: 0 6px 20px rgba(255, 77, 141, 0.35);
+}
+
+.btn-primary:hover,
+.btn-pink:hover {
+  background-color: var(--color-pink-hover);
+  border-color: var(--color-pink-hover);
+  color: var(--color-white);
+  box-shadow: 0 10px 28px rgba(255, 77, 141, 0.45);
+}
+
+/* White Hero Pill with Navy Border */
+.btn-white,
+.btn-outline {
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  border: 2px solid var(--color-navy);
+  box-shadow: 0 6px 20px rgba(10, 39, 86, 0.12);
+}
+
+.btn-white:hover,
+.btn-outline:hover {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  box-shadow: 0 10px 28px rgba(10, 39, 86, 0.25);
+}
+
+/* Teal Button */
+.btn-teal {
+  background-color: var(--color-teal);
+  color: var(--color-navy);
+  border-color: var(--color-teal);
+}
+
+.btn-teal:hover {
+  background-color: var(--color-teal-dark);
+  color: var(--color-white);
+}
+
+/* Small / Large modifiers */
+.btn-sm {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+.btn-lg {
+  padding: 0.95rem 2.2rem;
+  font-size: 1.15rem;
+}
+
+/* =============================================
+   4. HEADER & NAVBAR
+   ============================================= */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid rgba(10, 39, 86, 0.06);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.header.scrolled {
+  box-shadow: 0 8px 30px rgba(10, 39, 86, 0.08);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Bubble Bash Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.logo-bubble {
+  background: linear-gradient(135deg, var(--color-pink), var(--color-blue));
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 16px rgba(255, 77, 141, 0.35);
+  animation: floatBounce 3s ease-in-out infinite;
+}
+
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.logo-title span {
+  color: var(--color-pink);
+}
+
+.logo-sub {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--color-teal-dark);
+  text-transform: uppercase;
+}
+
+/* Nav Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.nav-link {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  position: relative;
+  padding: 0.4rem 0.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: var(--color-pink);
+  border-radius: 9999px;
+  transition: all 0.25s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover {
+  color: var(--color-pink);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--color-pink);
+}
+
+/* Header Action Button (Book a party style) */
+.header-cta {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .header-cta {
+    display: inline-flex;
+  }
+}
+
+/* Mobile Hamburger */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger-line {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background-color: var(--color-navy);
+  border-radius: 9999px;
+  transition: var(--transition-smooth);
+}
+
+.hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* =============================================
+   5. HERO SECTION (SUNNY YELLOW & BUBBLES)
+   ============================================= */
+.hero-bubble {
+  background-color: var(--color-yellow);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.4) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(255, 77, 141, 0.15) 0%, transparent 35%);
+  padding: 4rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating decorative bubbles in background */
+.floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  animation: floatBubble 6s ease-in-out infinite;
+}
+
+.circle-1 { width: 90px; height: 90px; top: 12%; right: 46%; animation-delay: 0s; }
+.circle-2 { width: 45px; height: 45px; top: 35%; right: 48%; animation-delay: 1.5s; background: rgba(25, 207, 184, 0.35); }
+.circle-3 { width: 70px; height: 70px; bottom: 10%; left: 8%; animation-delay: 2.5s; }
+.circle-4 { width: 35px; height: 35px; top: 18%; left: 4%; animation-delay: 3s; background: rgba(255, 77, 141, 0.3); }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+}
+
+/* Pill badge at top of Hero ("NOW SERVING...") */
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 0.45rem 1.25rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 15px rgba(10, 39, 86, 0.08);
+  margin-bottom: 1.25rem;
+}
+
+.pill-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-pink);
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulseDot 2s infinite;
+}
+
+.pill-dot.teal { background-color: var(--color-teal); }
+.pill-dot.yellow { background-color: var(--color-yellow); }
+.pill-dot.blue { background-color: var(--color-blue); }
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.5px;
+}
+
+.hero-title .brand-highlight {
+  color: var(--color-blue);
+  display: inline-block;
+}
+
+/* Pink Capsule Ribbon Subtitle */
+.hero-ribbon-pill {
+  display: inline-block;
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 0.55rem 1.4rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 16px rgba(255, 77, 141, 0.35);
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: var(--color-navy);
+  font-weight: 600;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 580px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Hero Right: Big Bubble Graphic Card */
+.hero-card-showcase {
+  background: linear-gradient(145deg, #FFFFFF, #FFF2D1);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  border: 4px solid var(--color-white);
+  box-shadow: 0 20px 50px rgba(10, 39, 86, 0.15);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-cat-img-wrapper {
+  width: 100%;
+  height: 280px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(10, 39, 86, 0.15);
+  margin-bottom: 1.5rem;
+  border: 3px solid var(--color-white);
+}
+
+.hero-cat-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.hero-card-showcase:hover .hero-cat-img-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Floating speech bubble / tag on showcase */
+.hero-floating-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--color-white);
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 15px rgba(10, 39, 86, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.hero-card-title {
+  font-size: 1.6rem;
+  color: var(--color-navy);
+  margin-bottom: 0.5rem;
+}
+
+.hero-card-caption {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+/* =============================================
+   6. MARQUEE TICKER (HOT PINK STRIP)
+   ============================================= */
+.marquee-wrapper {
+  background-color: var(--color-pink);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.85rem 0;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(255, 77, 141, 0.25);
+}
+
+.marquee-content {
+  display: inline-flex;
+  align-items: center;
+  animation: marqueeScroll 22s linear infinite;
+}
+
+.marquee-item {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-right: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.marquee-item::after {
+  content: '•';
+  color: var(--color-yellow);
+  font-size: 1.4rem;
+}
+
+/* =============================================
+   7. SECTION COMMON STYLING
+   ============================================= */
+.section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.section-title-wrap {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-pill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(10, 39, 86, 0.12);
+  margin-bottom: 1rem;
+}
+
+.section-main-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  line-height: 1.2;
+  margin-bottom: 0.85rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+/* =============================================
+   8. SECTION: "APA ITU PKD?" (NAVY SPLIT CARD)
+   ============================================= */
+.about-pkd-card {
+  background-color: var(--color-navy);
+  background-image: radial-gradient(circle at 90% 10%, rgba(25, 207, 184, 0.2) 0%, transparent 40%);
+  border-radius: var(--radius-xl);
+  padding: 3.5rem 3rem;
+  color: var(--color-white);
+  box-shadow: 0 20px 50px rgba(10, 39, 86, 0.25);
+  margin-bottom: 4rem;
+}
+
+.about-pkd-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .about-pkd-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.about-pkd-title {
+  font-size: 2.3rem;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.about-pkd-title span {
+  color: var(--color-teal);
+}
+
+.about-pkd-text {
+  color: #D1E1FA;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.about-pkd-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.highlight-chip {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-pkd-media {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  border: 2px dashed rgba(25, 207, 184, 0.4);
+  text-align: center;
+}
+
+.about-cat-preview {
+  width: 100%;
+  height: 240px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* =============================================
+   9. SECTION: 3 CHUNKY STEP CARDS (1, 2, 3)
+   ============================================= */
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.step-card {
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.step-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(10, 39, 86, 0.18);
+}
+
+/* Step 1: Yellow */
+.step-card-yellow {
+  background-color: var(--color-yellow);
+  color: var(--color-navy);
+}
+
+/* Step 2: Teal */
+.step-card-teal {
+  background-color: var(--color-teal);
+  color: var(--color-navy);
+}
+
+/* Step 3: Pink */
+.step-card-pink {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+
+.step-number-circle {
+  width: 52px;
+  height: 52px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(10, 39, 86, 0.12);
+}
+
+.step-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.85rem;
+  line-height: 1.25;
+}
+
+.step-card-yellow h3,
+.step-card-teal h3 {
+  color: var(--color-navy);
+}
+
+.step-card-pink h3 {
+  color: var(--color-white);
+}
+
+.step-card p {
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.step-card-yellow p,
+.step-card-teal p {
+  color: var(--color-navy);
+  opacity: 0.9;
+}
+
+.step-card-pink p {
+  color: var(--color-white);
+  opacity: 0.95;
+}
+
+.step-card-btn {
+  align-self: flex-start;
+  background: var(--color-white);
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 10px rgba(10, 39, 86, 0.1);
+}
+
+.step-card-btn:hover {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+/* Step tags underneath (Screenshot 3 pill pills) */
+.pill-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.feature-pill {
+  background-color: var(--color-white);
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 4px 12px rgba(10, 39, 86, 0.05);
+  border: 1px solid rgba(10, 39, 86, 0.08);
+}
+
+/* =============================================
+   10. SECTION: DARK NAVY 4-CARD SHOWCASE (SCREENSHOT 4)
+   ============================================= */
+.dark-navy-section {
+  background-color: var(--color-navy);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 200, 59, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(0, 136, 255, 0.18) 0%, transparent 40%);
+  padding: 5.5rem 0;
+  color: var(--color-white);
+}
+
+.dark-navy-title {
+  font-size: 2.6rem;
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.dark-navy-title span {
+  color: var(--color-yellow);
+}
+
+.four-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .four-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .four-cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.chunky-feature-card {
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.chunky-feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.card-yellow { background-color: var(--color-yellow); color: var(--color-navy); }
+.card-teal   { background-color: var(--color-teal);   color: var(--color-navy); }
+.card-pink   { background-color: var(--color-pink);   color: var(--color-white); }
+.card-blue   { background-color: var(--color-blue);   color: var(--color-white); }
+
+.card-icon-badge {
+  width: 56px;
+  height: 56px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(10, 39, 86, 0.15);
+}
+
+.chunky-feature-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.card-yellow h3,
+.card-teal h3 {
+  color: var(--color-navy);
+}
+
+.card-pink h3,
+.card-blue h3 {
+  color: var(--color-white);
+}
+
+.chunky-feature-card p {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.card-yellow p,
+.card-teal p {
+  color: var(--color-navy);
+  opacity: 0.9;
+}
+
+.card-pink p,
+.card-blue p {
+  color: var(--color-white);
+  opacity: 0.95;
+}
+
+/* =============================================
+   11. KATALOG PREVIEW / KUCING PILIHAN (SCREENSHOT 5)
+   ============================================= */
+.preview-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .preview-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.catalog-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 1.85rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid rgba(10, 39, 86, 0.08);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-smooth);
+}
+
+.catalog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(10, 39, 86, 0.12);
+}
+
+/* Top curved colored border on card */
+.catalog-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+}
+
+.catalog-card.arch-teal::before   { background-color: var(--color-teal); }
+.catalog-card.arch-blue::before   { background-color: var(--color-blue); }
+.catalog-card.arch-yellow::before { background-color: var(--color-yellow); }
+
+/* Floating "PALING POPULER" badge */
+.badge-popular {
+  position: absolute;
+  top: -14px;
+  right: 24px;
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 12px rgba(255, 77, 141, 0.4);
+}
+
+.catalog-card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.catalog-card-icon.teal-bg   { background-color: var(--color-teal-light); }
+.catalog-card-icon.blue-bg   { background-color: var(--color-blue-light); }
+.catalog-card-icon.yellow-bg { background-color: var(--color-yellow-light); }
+
+.catalog-card-img {
+  width: 100%;
+  height: 180px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 15px rgba(10, 39, 86, 0.08);
+}
+
+.catalog-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.catalog-badge-pill {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+}
+
+.badge-teal   { background: var(--color-teal-light);   color: var(--color-teal-dark); }
+.badge-blue   { background: var(--color-blue-light);   color: var(--color-blue); }
+.badge-yellow { background: var(--color-yellow-light); color: var(--color-yellow-dark); }
+
+.catalog-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.catalog-card .btn {
+  width: 100%;
+}
+
+/* =============================================
+   12. SEARCH BAR & FILTERS (PAGES KUCING & PETSHOP)
+   ============================================= */
+.search-filter-wrapper {
+  background-color: var(--color-white);
+  padding: 2.25rem 2rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(10, 39, 86, 0.08);
+  margin-bottom: 3.5rem;
+}
+
+.search-input-pill-wrap {
+  position: relative;
+  max-width: 620px;
+  margin: 0 auto 1.5rem;
+}
+
+.search-input-pill {
+  width: 100%;
+  padding: 1.1rem 1.5rem 1.1rem 3.4rem;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  background-color: var(--color-bg);
+  border: 2px solid rgba(10, 39, 86, 0.12);
+  border-radius: var(--radius-pill);
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+.search-input-pill:focus {
+  border-color: var(--color-pink);
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 4px rgba(255, 77, 141, 0.18);
+}
+
+.search-pill-icon {
+  position: absolute;
+  left: 1.35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  pointer-events: none;
+}
+
+.filter-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.filter-btn {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-pill);
+  border: 2px solid rgba(10, 39, 86, 0.12);
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-pink);
+  color: var(--color-pink);
+}
+
+.filter-btn.active {
+  background-color: var(--color-pink);
+  border-color: var(--color-pink);
+  color: var(--color-white);
+  box-shadow: 0 4px 15px rgba(255, 77, 141, 0.35);
+}
+
+/* =============================================
+   13. KUCING CARDS GRID & CARDS
+   ============================================= */
+.cat-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .cat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cat-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cat-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(10, 39, 86, 0.08);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.cat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(10, 39, 86, 0.14);
+}
+
+.cat-image-container {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-bg);
+}
+
+.cat-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.cat-card:hover .cat-photo {
+  transform: scale(1.06);
+}
+
+.cat-card-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.cat-name {
+  font-size: 1.45rem;
+  color: var(--color-navy);
+}
+
+.cat-type-badge {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-pill);
+}
+
+.cat-type-badge.berbulu-panjang {
+  background-color: var(--color-yellow-light);
+  color: var(--color-yellow-dark);
+}
+
+.cat-type-badge.berbulu-pendek {
+  background-color: var(--color-teal-light);
+  color: var(--color-teal-dark);
+}
+
+.cat-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.cat-origin {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+}
+
+.cat-characteristics {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+.cat-characteristics li {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cat-characteristics li::before {
+  content: '🐾';
+  font-size: 0.75rem;
+}
+
+/* =============================================
+   14. PETSHOP CARDS (WEBFLOW BUBBLE BASH)
+   ============================================= */
+.petshop-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  border: 1px solid rgba(10, 39, 86, 0.08);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.petshop-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--color-teal), var(--color-blue));
+}
+
+.petshop-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(10, 39, 86, 0.14);
+}
+
+.petshop-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.petshop-emoji-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-yellow-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(10, 39, 86, 0.08);
+}
+
+.petshop-title-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.petshop-name {
+  font-size: 1.35rem;
+  color: var(--color-navy);
+}
+
+.petshop-area-badge {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: var(--color-teal-light);
+  color: var(--color-teal-dark);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2rem 0.8rem;
+  border-radius: var(--radius-pill);
+}
+
+.petshop-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.petshop-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.info-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.petshop-services {
+  margin-top: 0.5rem;
+}
+
+.services-label {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.4rem;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.service-tag {
+  background-color: var(--color-bg);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  border: 1px solid rgba(10, 39, 86, 0.06);
+}
+
+.petshop-footer {
+  margin-top: auto;
+}
+
+.maps-btn {
+  width: 100%;
+}
+
+/* =============================================
+   15. MAKANAN PAGE CARDS
+   ============================================= */
+.food-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .food-compare-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.food-card {
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-card);
+}
+
+.food-card.dry-food {
+  background-color: var(--color-yellow);
+  color: var(--color-navy);
+}
+
+.food-card.wet-food {
+  background-color: var(--color-teal);
+  color: var(--color-navy);
+}
+
+.food-card h3 {
+  font-size: 1.85rem;
+  margin-bottom: 0.85rem;
+  color: var(--color-navy);
+}
+
+.food-card p {
+  color: var(--color-navy);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.food-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.food-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* Important Health Disclaimer Box */
+.disclaimer-box {
+  background-color: var(--color-pink-light);
+  border: 2px solid var(--color-pink);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.disclaimer-icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+
+.disclaimer-box p {
+  color: var(--color-navy);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* =============================================
+   16. TENTANG PAGE & TEAM CARDS
+   ============================================= */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.team-bubble-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 1.75rem;
+  text-align: center;
+  border: 1px solid rgba(10, 39, 86, 0.08);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-smooth);
+}
+
+.team-bubble-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(10, 39, 86, 0.12);
+}
+
+.team-avatar-bubble {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 1.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  box-shadow: 0 6px 16px rgba(10, 39, 86, 0.1);
+}
+
+.team-name {
+  font-size: 1.35rem;
+  color: var(--color-navy);
+  margin-bottom: 0.3rem;
+}
+
+.team-role {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-pink);
+  margin-bottom: 0.85rem;
+}
+
+.team-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* =============================================
+   17. FOOTER
+   ============================================= */
+.footer {
+  background-color: var(--color-navy-dark);
+  color: var(--color-white);
+  padding: 4.5rem 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+}
+
+.footer-brand .logo-title {
+  color: var(--color-white);
+}
+
+.footer-text {
+  color: #B2C8EC;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-top: 1rem;
+  max-width: 400px;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  color: var(--color-yellow);
+  margin-bottom: 1.25rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links a {
+  color: #D1E1FA;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-links a:hover {
+  color: var(--color-pink);
+  transform: translateX(4px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #8CAAD8;
+}
+
+/* =============================================
+   18. ANIMATIONS & KEYFRAMES
+   ============================================= */
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes floatBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes floatBubble {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-15px) scale(1.05); }
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+/* =============================================
+   19. RESPONSIVE NAVIGATION (MOBILE)
+   ============================================= */
+@media (max-width: 899px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.25rem;
+    box-shadow: 0 20px 40px rgba(10, 39, 86, 0.15);
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-smooth);
+    border-bottom: 3px solid var(--color-pink);
+  }
+
+  .nav-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* =============================================
+   20. PAGE HERO BANNER (SUBPAGES)
+   ============================================= */
+.page-hero-bubble {
+  background-color: var(--color-yellow);
+  background-image: radial-gradient(circle at 85% 20%, rgba(255, 77, 141, 0.15) 0%, transparent 40%);
+  padding: 3.5rem 0 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero-icon {
+  width: 68px;
+  height: 68px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 18px rgba(10, 39, 86, 0.12);
+  animation: floatBounce 3s ease-in-out infinite;
+}
+
+.page-hero-title {
+  font-size: 2.5rem;
+  color: var(--color-navy);
+  margin-bottom: 0.75rem;
+}
+
+.page-hero-desc {
+  font-size: 1.1rem;
+  color: var(--color-navy);
+  font-weight: 600;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Empty State Bubble Style */
+.empty-state {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  border: 2px dashed rgba(10, 39, 86, 0.15);
+  margin: 2rem 0;
+}
+
+.empty-state-emoji {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+  font-size: 1.6rem;
+  color: var(--color-navy);
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.result-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+#result-count {
+  color: var(--color-pink);
+  font-weight: 700;
+}
+
+/* Back to top floating pill */
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(255, 77, 141, 0.4);
+  transition: var(--transition-smooth);
+  z-index: 99;
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px) scale(1.08);
+  background-color: var(--color-pink-hover);
+}
+
+/* =============================================
+   21. SETTINGS BUTTON & MODAL (MENU PENGATURAN)
+   ============================================= */
+.header-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-settings-toggle {
+  background: var(--color-white);
+  border: 2px solid rgba(10, 39, 86, 0.12);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+}
+
+.btn-settings-toggle:hover {
+  transform: rotate(45deg) scale(1.08);
+  border-color: var(--color-pink);
+  background: var(--color-pink-light);
+}
+
+/* Modal Backdrop */
+.settings-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(10, 39, 86, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.settings-modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Modal Card */
+.settings-modal-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  border: 3px solid var(--color-pink);
+  transform: scale(0.9) translateY(20px);
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.settings-modal-backdrop.open .settings-modal-card {
+  transform: scale(1) translateY(0);
+}
+
+/* Modal Header */
+.settings-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.85rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px dashed rgba(10, 39, 86, 0.1);
+}
+
+.settings-modal-title {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-navy);
+}
+
+.settings-close-btn {
+  background: var(--color-bg);
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.settings-close-btn:hover {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  transform: rotate(90deg);
+}
+
+/* Settings Sections */
+.settings-section-box {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(10, 39, 86, 0.08);
+}
+
+.settings-section-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Segmented Pill Group (Language, Font Size, Motion) */
+.settings-pill-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.6rem;
+}
+
+.settings-pill-btn {
+  background: var(--color-white);
+  border: 2px solid rgba(10, 39, 86, 0.12);
+  border-radius: var(--radius-pill);
+  padding: 0.65rem 1rem;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: var(--transition-smooth);
+}
+
+.settings-pill-btn:hover {
+  border-color: var(--color-pink);
+  transform: translateY(-2px);
+}
+
+.settings-pill-btn.active {
+  background-color: var(--color-pink);
+  border-color: var(--color-pink);
+  color: var(--color-white);
+  box-shadow: 0 4px 14px rgba(255, 77, 141, 0.35);
+}
+
+/* Theme Grid Options */
+.theme-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .theme-options-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.theme-card-option {
+  background: var(--color-white);
+  border: 2px solid rgba(10, 39, 86, 0.12);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: var(--transition-smooth);
+}
+
+.theme-card-option:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-pink);
+}
+
+.theme-card-option.active {
+  border-color: var(--color-pink);
+  background-color: var(--color-pink-light);
+  box-shadow: 0 4px 14px rgba(255, 77, 141, 0.2);
+}
+
+.theme-color-preview {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.theme-name-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-name-title {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.theme-name-desc {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* Audio & Motion Row */
+.settings-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.btn-test-meow {
+  background-color: var(--color-teal);
+  color: var(--color-navy);
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-test-meow:hover {
+  background-color: var(--color-teal-dark);
+  color: var(--color-white);
+  transform: scale(1.05);
+}
+
+/* Settings Modal Footer */
+.settings-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px dashed rgba(10, 39, 86, 0.1);
+  gap: 1rem;
+}
+
+.btn-reset-settings {
+  background: transparent;
+  border: 1px solid rgba(10, 39, 86, 0.2);
+  color: var(--color-text-secondary);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-reset-settings:hover {
+  background: rgba(224, 90, 90, 0.1);
+  color: #E05A5A;
+  border-color: #E05A5A;
+}
